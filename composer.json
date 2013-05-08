@@ -1,0 +1,25 @@
+{
+    "name": "cept/cept",
+    "description": "Cept library",
+    "type": "library",
+    "keywords": [
+        "library",
+        "cept"
+    ],
+    "authors": [
+        {
+            "name": "Chris de Kok",
+            "homepage": "http://con.cept.me"
+        }
+    ],
+    "homepage": "http://github.com/Mech7/Cept",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Cept\\": "library/"
+        }
+    }
+}
