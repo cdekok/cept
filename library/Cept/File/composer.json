@@ -1,0 +1,17 @@
+{
+    "name": "cept/cept-file",
+    "description": "Basic file functionality",
+    "keywords": [
+        "cept",
+        "file"
+    ],
+    "autoload": {
+        "psr-0": {
+            "Cept\\File\\": ""
+        }
+    },
+    "target-dir": "Cept/File",
+    "require": {
+        "php": ">=5.4"
+    }
+}
