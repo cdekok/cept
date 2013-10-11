@@ -28,6 +28,12 @@ class Writer
     protected $firstColumnCount;
 
     /**
+     * Row counter, to check how many rows are written
+     * @var integer
+     */
+    protected $rowCount = 0;
+
+    /**
      *
      * @param string $file Path to file on disk (if it does not exists it will try to create it)
      * @param string $delimiter
@@ -62,6 +68,17 @@ class Writer
         if (fputcsv($this->filepointer, $row, $this->delimiter, $this->enclosure) === false) {
             throw new \Cept\Csv\Exception\WriteException('Failed to write row to csv: '.  var_export($row, true));
         }
+        $this->rowCount++;
+    }
+
+    /**
+     * Return's the written amount of rows
+     * 
+     * @return integer
+     */
+    public function getRowCount()
+    {
+        return $this->rowCount;
     }
 
     /**
